@@ -1,0 +1,15 @@
+{
+  "MERGE without AlphaGenome": {
+    "algorithm": "LR_L2",
+    "features": [
+      "AlphaMissense_score",
+      "ESM1b_score",
+      "carbon_score",
+      "enformer_top5_absmean",
+      "enformer_pos_sum",
+      "evo2_7b_score"
+    ],
+    "n_train": 4077
+  },
+  "note": "03_datasets/coding_features.csv without the 212 variants in chr17:43,044,295-43,125,364"
+}

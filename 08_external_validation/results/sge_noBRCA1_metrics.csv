@@ -1,0 +1,2 @@
+predictor,n_common,auroc,auroc_ci_low,auroc_ci_high,auprc,auprc_ci_low,auprc_ci_high
+MERGE without AlphaGenome,1577,0.899003847063122,0.8784923112467493,0.9175950751144446,0.6985850730215631,0.6488488030091718,0.7485099128781072

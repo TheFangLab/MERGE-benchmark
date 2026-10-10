@@ -1,0 +1,9 @@
+metric,value
+rows_before,35774
+unique_variant_keys_before,35394
+duplicate_variant_keys,379
+rows_in_duplicate_keys_removed,759
+rows_after,35015
+positive_after,22247
+negative_after,12768
+duplicate_keys_after,0

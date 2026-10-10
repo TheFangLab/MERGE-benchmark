@@ -1,0 +1,172 @@
+{
+  "splicing": {
+    "task": "splicing",
+    "alphagenome_feature": "alphagenome_splicing",
+    "n_oof": 34444,
+    "pos_rate": 0.6446,
+    "cuts": [
+      0.6725,
+      0.5308,
+      0.3935,
+      0.2535
+    ],
+    "band_names": [
+      "Pathogenic",
+      "Likely Pathogenic",
+      "Uncertain Significance",
+      "Likely Benign",
+      "Benign"
+    ],
+    "band_agreement_with_ensemble": 0.8123,
+    "band_agreement_if_reusing_ensemble_cuts": 0.6489,
+    "per_cut_check": [
+      {
+        "ensemble_cut": 0.8,
+        "merge_alphagenome_average_cut": 0.6725,
+        "share_below_cut": 0.5252,
+        "ensemble": {
+          "call_rate": 0.4748,
+          "sensitivity": 0.7087,
+          "specificity": 0.9495
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.4748,
+          "sensitivity": 0.7252,
+          "specificity": 0.9793
+        }
+      },
+      {
+        "ensemble_cut": 0.6,
+        "merge_alphagenome_average_cut": 0.5308,
+        "share_below_cut": 0.4348,
+        "ensemble": {
+          "call_rate": 0.5652,
+          "sensitivity": 0.8234,
+          "specificity": 0.903
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.5652,
+          "sensitivity": 0.8457,
+          "specificity": 0.9435
+        }
+      },
+      {
+        "ensemble_cut": 0.4,
+        "merge_alphagenome_average_cut": 0.3935,
+        "share_below_cut": 0.3774,
+        "ensemble": {
+          "call_rate": 0.6226,
+          "sensitivity": 0.8805,
+          "specificity": 0.8451
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.6226,
+          "sensitivity": 0.9024,
+          "specificity": 0.8848
+        }
+      },
+      {
+        "ensemble_cut": 0.2,
+        "merge_alphagenome_average_cut": 0.2535,
+        "share_below_cut": 0.2967,
+        "ensemble": {
+          "call_rate": 0.7033,
+          "sensitivity": 0.9312,
+          "specificity": 0.7099
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.7033,
+          "sensitivity": 0.9577,
+          "specificity": 0.758
+        }
+      }
+    ],
+    "source_oof": "05_results_alphagenome_average/splicing_alphagenome_average_oof.csv",
+    "component_transform": "mid-rank empirical CDF, no labels, no fitted model"
+  },
+  "noncoding": {
+    "task": "noncoding",
+    "alphagenome_feature": "alphagenome_raw_score_max",
+    "n_oof": 86829,
+    "pos_rate": 0.0154,
+    "cuts": [
+      0.8274,
+      0.6955,
+      0.5884,
+      0.506
+    ],
+    "band_names": [
+      "Pathogenic",
+      "Likely Pathogenic",
+      "Uncertain Significance",
+      "Likely Benign",
+      "Benign"
+    ],
+    "band_agreement_with_ensemble": 0.936,
+    "band_agreement_if_reusing_ensemble_cuts": 0.3925,
+    "per_cut_check": [
+      {
+        "ensemble_cut": 0.8,
+        "merge_alphagenome_average_cut": 0.8274,
+        "share_below_cut": 0.9843,
+        "ensemble": {
+          "call_rate": 0.0157,
+          "sensitivity": 0.6022,
+          "specificity": 0.9934
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.0157,
+          "sensitivity": 0.6612,
+          "specificity": 0.9944
+        }
+      },
+      {
+        "ensemble_cut": 0.6,
+        "merge_alphagenome_average_cut": 0.6955,
+        "share_below_cut": 0.9754,
+        "ensemble": {
+          "call_rate": 0.0246,
+          "sensitivity": 0.6918,
+          "specificity": 0.9859
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.0246,
+          "sensitivity": 0.7373,
+          "specificity": 0.9866
+        }
+      },
+      {
+        "ensemble_cut": 0.4,
+        "merge_alphagenome_average_cut": 0.5884,
+        "share_below_cut": 0.962,
+        "ensemble": {
+          "call_rate": 0.038,
+          "sensitivity": 0.747,
+          "specificity": 0.9731
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.038,
+          "sensitivity": 0.8127,
+          "specificity": 0.9741
+        }
+      },
+      {
+        "ensemble_cut": 0.2,
+        "merge_alphagenome_average_cut": 0.506,
+        "share_below_cut": 0.9286,
+        "ensemble": {
+          "call_rate": 0.0714,
+          "sensitivity": 0.8172,
+          "specificity": 0.9403
+        },
+        "merge_alphagenome_average": {
+          "call_rate": 0.0714,
+          "sensitivity": 0.9142,
+          "specificity": 0.9418
+        }
+      }
+    ],
+    "source_oof": "05_results_alphagenome_average/noncoding_alphagenome_average_oof.csv",
+    "component_transform": "mid-rank empirical CDF, no labels, no fitted model"
+  }
+}

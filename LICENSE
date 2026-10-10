@@ -1,0 +1,53 @@
+MERGE benchmark — licence
+=========================
+
+  * Source code (all scripts in 01_dataset_construction/, 02_feature_extraction/,
+    04_modeling/, 07_baselines/scripts/ and 08_external_validation/scripts/) — MIT,
+    in full below.
+  * The models in 05_results/trained_models/ and 08_external_validation/models/ — MIT.
+    Their candidate pool excludes every alphagenome_* column.
+  * Derived tables and figures (03_datasets/, 05_results/, 05_results_alphagenome_average/
+    except the file below, 07_baselines/results/, 08_external_validation/cohort/,
+    features/ and results/, 06_figures/) — CC BY 4.0.
+    https://creativecommons.org/licenses/by/4.0/
+  * 05_results_alphagenome_average/alphagenome_reference_quantiles.json — CC BY-NC 4.0.
+    https://creativecommons.org/licenses/by-nc/4.0/
+    It contains no trained model, but it summarizes AlphaGenome output, whose API is
+    offered for non-commercial use.
+  * Scores of third-party tools extracted for the benchmark variants
+    (07_baselines/scores/, 07_baselines/cadd_raw/, 08_external_validation/model_outputs/),
+    the columns of 03_datasets/ and 08_external_validation/features/ taken from dbNSFP
+    (AlphaMissense_score, ESM1b_score) or the AlphaGenome API (alphagenome_*), and the
+    Findlay et al. (2018) supplementary table (08_external_validation/source/) remain
+    under the terms of their sources.
+
+None of this relicenses the upstream models, databases or services the pipeline uses.
+AlphaGenome, Nucleotide Transformer (v1 and v2), dbNSFP, CADD and ANNOVAR restrict
+commercial use. See README.md and
+https://github.com/TheFangLab/MERGE/blob/main/THIRD_PARTY_NOTICES.md.
+
+Not a medical device. Not for clinical use.
+
+
+MIT License
+-----------
+
+Copyright (c) 2026 The MERGE benchmark authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -1,0 +1,12 @@
+feature,mean_abs_shap
+AlphaMissense_score,3.404549528481702
+ESM1b_score,1.012049286363711
+enformer_top5_absmean,0.7916152470213476
+enformer_std,0.7326486416209325
+enformer_max_abs,0.6194818899344593
+evo2_1b_base_score,0.6071263383931058
+evo2_7b_score,0.5714670032827741
+carbon_score,0.4861237839266024
+enformer_absmean,0.41382914486267675
+enformer_neg_sum,0.3724462911500991
+heyenadna_score,0.31359249375264486

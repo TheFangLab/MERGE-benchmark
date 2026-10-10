@@ -1,0 +1,118 @@
+{
+  "task": "coding",
+  "balanced": true,
+  "n": 2754,
+  "pos_rate": 0.5,
+  "n_features": 19,
+  "excluded_features": [
+    "alphagenome_raw_score_max",
+    "alphagenome_quantile_score_max",
+    "alphagenome_raw_score_min",
+    "alphagenome_quantile_score_min",
+    "alphagenome_raw_score_mean",
+    "alphagenome_quantile_score_mean"
+  ],
+  "dropped": [],
+  "best_single_feature": "AlphaMissense_score",
+  "best_single_auroc": 0.9439382258753426,
+  "best_single_auprc": 0.9444707552362175,
+  "best_strategy": "correlation",
+  "merge_auroc": 0.9480169838802065,
+  "merge_auprc": 0.9425756838287006,
+  "selected_features": {
+    "lasso": {
+      "1": [
+        "AlphaMissense_score",
+        "ESM1b_score",
+        "GPN_MSA_score",
+        "carbon_score",
+        "enformer_top5_absmean",
+        "NT_score",
+        "enformer_mean",
+        "evo2_7b_score",
+        "heyenadna_score",
+        "generator_score"
+      ],
+      "2": [
+        "AlphaMissense_score",
+        "GPN_MSA_score",
+        "ESM1b_score",
+        "enformer_max_abs",
+        "evo2_7b_score",
+        "heyenadna_score",
+        "evo2_1b_base_score"
+      ],
+      "3": [
+        "AlphaMissense_score",
+        "enformer_max_abs",
+        "ESM1b_score",
+        "generator_score",
+        "carbon_score",
+        "generator_v2_score",
+        "enformer_std",
+        "enformer_absmean",
+        "GPN_MSA_score",
+        "heyenadna_score",
+        "evo2_7b_score",
+        "enformer_pos_sum"
+      ]
+    },
+    "correlation": {
+      "1": [
+        "AlphaMissense_score",
+        "ESM1b_score",
+        "GPN_MSA_score",
+        "evo2_1b_base_score",
+        "evo2_7b_base_score",
+        "carbon_score",
+        "generator_v2_score",
+        "enformer_max_abs",
+        "enformer_std",
+        "NT_score"
+      ],
+      "2": [
+        "AlphaMissense_score",
+        "GPN_MSA_score",
+        "ESM1b_score"
+      ],
+      "3": [
+        "AlphaMissense_score",
+        "ESM1b_score",
+        "GPN_MSA_score",
+        "evo2_7b_score",
+        "evo2_1b_base_score",
+        "carbon_score",
+        "generator_score",
+        "enformer_max_abs",
+        "heyenadna_score",
+        "enformer_pos_sum"
+      ]
+    },
+    "beam": {
+      "1": [
+        "AlphaMissense_score",
+        "ESM1b_score",
+        "carbon_score",
+        "enformer_top5_absmean",
+        "NT_score",
+        "evo2_1b_base_score"
+      ],
+      "2": [
+        "AlphaMissense_score",
+        "enformer_max_abs",
+        "ESM1b_score",
+        "enformer_pos_sum",
+        "evo2_7b_base_score"
+      ],
+      "3": [
+        "AlphaMissense_score",
+        "ESM1b_score",
+        "carbon_score",
+        "enformer_max_abs",
+        "heyenadna_score",
+        "enformer_pos_sum"
+      ]
+    }
+  },
+  "runtime_sec": 97.6
+}

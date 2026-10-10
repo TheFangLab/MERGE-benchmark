@@ -1,0 +1,5 @@
+task,variants,positive,negative,positive_prevalence,benchmark_features,merge_candidate_features
+Coding SNVs,4289,2912,1377,0.6789461412916764,25,19
+Splicing SNVs,35015,22247,12768,0.6353562758817649,18,17
+Noncoding SNVs,86829,1340,85489,0.015432631954761657,23,17
+Non-SNVs,36862,30022,6840,0.8144430578915957,22,16

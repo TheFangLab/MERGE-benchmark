@@ -1,0 +1,16 @@
+# Python 3.11. Versions of the modelling and statistics environment used for every
+# number in the manuscript (full freeze: modeling_env_pip_freeze.txt).
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+scikit-learn==1.9.0
+xgboost==3.2.0
+lightgbm==4.6.0
+catboost==1.2.10
+shap==0.51.0
+statsmodels==0.14.6
+joblib==1.5.3
+matplotlib==3.11.0
+pillow==12.3.0
+# only for 08_external_validation/scripts/01_build_sge_cohort.py (reads the .xlsx)
+openpyxl

@@ -1,0 +1,28 @@
+# Downloaded raw data (see 00_raw_data/README.md)
+00_raw_data/clinvar/
+00_raw_data/genome/
+00_raw_data/gencode/
+00_raw_data/gnomad/
+00_raw_data/dbnsfp/
+00_raw_data/gpn_msa/
+00_raw_data/splicevardb/
+00_raw_data/annovar/
+
+# Working directories of the construction and baseline scripts
+01_dataset_construction/**/work/
+01_dataset_construction/**/out/
+02_feature_extraction/out/
+07_baselines/vcf/
+07_baselines/work/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Per-variant outputs of the 1:1 class-balance runs (only the summaries are kept)
+05_results/balanced_1to1/*_oof.csv
+05_results/balanced_1to1/*_shap*.csv
+
+# Models re-fitted by 04_modeling/run_all.sh (the released ones are in trained_models/)
+05_results/trained_models_refit/

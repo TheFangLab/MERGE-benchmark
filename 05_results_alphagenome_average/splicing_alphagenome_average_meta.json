@@ -1,0 +1,18 @@
+{
+  "task": "splicing",
+  "offered": true,
+  "dataset": "03_datasets/splicing_features.csv",
+  "n": 35015,
+  "n_alphagenome_present": 34444,
+  "positive_rate": 0.6353562758817649,
+  "display_name": "MERGE + AlphaGenome average",
+  "field_name": "merge_alphagenome_average",
+  "formula": "0.5 * P(MERGE without AlphaGenome) + 0.5 * ECDF percentile of the selected AlphaGenome column",
+  "weighting": "fixed 1:1, not fitted",
+  "alphagenome_feature": "alphagenome_splicing",
+  "feature_selection": "fixed per variant type",
+  "component_transform": "training-fold median imputation, then mid-rank empirical CDF against the training-fold AlphaGenome values; no labels, no fitted model",
+  "ensemble_strategy": "lasso",
+  "missing_policy": "evaluation: a missing AlphaGenome score takes the training-fold median before the percentile transform, so every variant is scored; deployment: the average is computed only where AlphaGenome has a score (alphagenome_observed = 1)",
+  "exported_table_max_abs_deviation": 0.0
+}

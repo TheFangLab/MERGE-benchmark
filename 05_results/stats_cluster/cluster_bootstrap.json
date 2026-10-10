@@ -1,0 +1,134 @@
+[
+ {
+  "task": "coding",
+  "n": 4289,
+  "n_chr": 22,
+  "merge_auroc": 0.9486,
+  "merge_auroc_ci_cluster": [
+   0.9299,
+   0.9627
+  ],
+  "single_auroc": 0.9325,
+  "single_auroc_ci_cluster": [
+   0.9073,
+   0.9529
+  ],
+  "delta_auroc": 0.0162,
+  "delta_auroc_ci_cluster": [
+   0.0062,
+   0.0285
+  ],
+  "delta_auroc_p_cluster": 0.0,
+  "merge_auprc": 0.971,
+  "merge_auprc_ci_cluster": [
+   0.9554,
+   0.9815
+  ],
+  "single_auprc": 0.9646,
+  "delta_auprc": 0.0064,
+  "delta_auprc_ci_cluster": [
+   0.0013,
+   0.0106
+  ],
+  "delta_auprc_p_cluster": 0.013
+ },
+ {
+  "task": "splicing",
+  "n": 35015,
+  "n_chr": 24,
+  "merge_auroc": 0.9268,
+  "merge_auroc_ci_cluster": [
+   0.9204,
+   0.9329
+  ],
+  "single_auroc": 0.9571,
+  "single_auroc_ci_cluster": [
+   0.9511,
+   0.9622
+  ],
+  "delta_auroc": -0.0303,
+  "delta_auroc_ci_cluster": [
+   -0.0355,
+   -0.0252
+  ],
+  "delta_auroc_p_cluster": 0.0,
+  "merge_auprc": 0.956,
+  "merge_auprc_ci_cluster": [
+   0.9519,
+   0.9603
+  ],
+  "single_auprc": 0.9716,
+  "delta_auprc": -0.0156,
+  "delta_auprc_ci_cluster": [
+   -0.0197,
+   -0.012
+  ],
+  "delta_auprc_p_cluster": 0.0
+ },
+ {
+  "task": "noncoding",
+  "n": 86829,
+  "n_chr": 23,
+  "merge_auroc": 0.9325,
+  "merge_auroc_ci_cluster": [
+   0.9178,
+   0.9481
+  ],
+  "single_auroc": 0.9783,
+  "single_auroc_ci_cluster": [
+   0.9702,
+   0.9846
+  ],
+  "delta_auroc": -0.0458,
+  "delta_auroc_ci_cluster": [
+   -0.0607,
+   -0.028
+  ],
+  "delta_auroc_p_cluster": 0.0,
+  "merge_auprc": 0.6032,
+  "merge_auprc_ci_cluster": [
+   0.5402,
+   0.6644
+  ],
+  "single_auprc": 0.7074,
+  "delta_auprc": -0.1042,
+  "delta_auprc_ci_cluster": [
+   -0.1542,
+   -0.0146
+  ],
+  "delta_auprc_p_cluster": 0.02
+ },
+ {
+  "task": "nonsnv",
+  "n": 36862,
+  "n_chr": 23,
+  "merge_auroc": 0.9807,
+  "merge_auroc_ci_cluster": [
+   0.9779,
+   0.9829
+  ],
+  "single_auroc": 0.9361,
+  "single_auroc_ci_cluster": [
+   0.9178,
+   0.9507
+  ],
+  "delta_auroc": 0.0446,
+  "delta_auroc_ci_cluster": [
+   0.0298,
+   0.0642
+  ],
+  "delta_auroc_p_cluster": 0.0,
+  "merge_auprc": 0.9943,
+  "merge_auprc_ci_cluster": [
+   0.9925,
+   0.9957
+  ],
+  "single_auprc": 0.9844,
+  "delta_auprc": 0.0099,
+  "delta_auprc_ci_cluster": [
+   0.0072,
+   0.0129
+  ],
+  "delta_auprc_p_cluster": 0.0
+ }
+]

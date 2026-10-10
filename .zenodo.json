@@ -1,0 +1,17 @@
+{
+  "title": "MERGE-benchmark: data and code for benchmarking genomic foundation and sequence-to-function models for variant pathogenicity prediction",
+  "description": "<p>Data and code for benchmarking DNA language, evolutionary, protein and sequence-to-function models on four variant classes &mdash; coding missense SNVs (n = 4,289), splicing SNVs (n = 35,015), noncoding SNVs (n = 86,829) and short non-SNVs (n = 36,862) &mdash; under fixed chromosome-held-out folds, and for MERGE (Model Ensemble for Ranking Genomic Effects), which integrates fixed model-derived features. AlphaGenome is evaluated independently and through a fixed score average; its outputs are not used for supervised feature selection or model fitting.</p><p>The archive contains the dataset-construction and feature-extraction code, the four feature tables, the modelling and statistics code, out-of-fold predictions and result tables (manuscript Tables 1&ndash;10), the comparison with established predictors, the BRCA1 saturation genome editing validation, the deployable models and the manuscript figures.</p><p>Code and models: MIT. Derived tables and figures: CC BY 4.0. AlphaGenome percentile table: CC BY-NC 4.0. Third-party scores and upstream resources keep their own terms; see README.</p>",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "creators": [
+    {"name": "Chen, Yang", "affiliation": "Sun Yat-sen University"},
+    {"name": "Fang, Li", "affiliation": "Sun Yat-sen University"}
+  ],
+  "keywords": ["variant effect prediction", "genomic foundation models", "sequence-to-function models", "benchmarking", "ensemble learning", "ClinVar", "AlphaGenome", "Evo 2"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/TheFangLab/MERGE", "relation": "isSupplementedBy", "scheme": "url"},
+    {"identifier": "https://pypi.org/project/merge-cli/", "relation": "isSupplementedBy", "scheme": "url"},
+    {"identifier": "https://merge.fanglab.cn", "relation": "isDocumentedBy", "scheme": "url"}
+  ]
+}

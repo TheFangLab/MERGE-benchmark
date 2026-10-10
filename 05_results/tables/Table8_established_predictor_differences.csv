@@ -1,0 +1,15 @@
+score,task,comparator,n,positives,d_auroc,auroc_lo,auroc_hi,auroc_resolved,d_auprc,auprc_lo,auprc_hi,auprc_resolved
+MERGE,Coding SNVs,CADD,4289,2912,0.045,0.0281,0.0728,True,0.0301,0.0154,0.0529,True
+MERGE,Splicing SNVs,SpliceAI,33699,21842,-0.0278,-0.0337,-0.0227,True,-0.0087,-0.0136,-0.0044,True
+MERGE,Splicing SNVs,Pangolin,34271,21983,-0.0078,-0.014,-0.0015,True,-0.0002,-0.0045,0.0037,False
+MERGE,Splicing SNVs,AlphaGenome splicing,35015,22247,-0.0303,-0.0357,-0.0254,True,-0.0156,-0.0198,-0.0119,True
+MERGE,Noncoding SNVs,CADD,86829,1340,0.0092,-0.0028,0.0272,False,0.1464,0.0906,0.2263,True
+MERGE,Noncoding SNVs,AlphaGenome quantile maximum,86829,1340,-0.0458,-0.0612,-0.0264,True,-0.1042,-0.1562,0.0006,False
+MERGE,Noncoding SNVs,AlphaGenome raw maximum,86829,1340,-0.0446,-0.0573,-0.0284,True,-0.1974,-0.2429,-0.1259,True
+MERGE,Non-SNVs,CADD,36861,30021,0.0035,0.0001,0.0078,True,0.0011,-0.0002,0.0029,False
+Average,Splicing SNVs,SpliceAI,33699,21842,0.0039,0.001,0.0068,True,0.0089,0.0061,0.012,True
+Average,Splicing SNVs,Pangolin,34271,21983,0.0226,0.0177,0.0282,True,0.0178,0.0146,0.0215,True
+Average,Splicing SNVs,AlphaGenome splicing,35015,22247,-0.0001,-0.0026,0.0024,False,0.0026,0.0009,0.0042,True
+Average,Noncoding SNVs,CADD,86829,1340,0.0538,0.0431,0.0647,True,0.2495,0.202,0.3195,True
+Average,Noncoding SNVs,AlphaGenome quantile maximum,86829,1340,-0.0012,-0.0082,0.0069,False,-0.0011,-0.0444,0.0944,False
+Average,Noncoding SNVs,AlphaGenome raw maximum,86829,1340,-0.0001,-0.0032,0.0045,False,-0.0943,-0.1287,-0.0349,True

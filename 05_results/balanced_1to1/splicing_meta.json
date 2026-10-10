@@ -1,0 +1,128 @@
+{
+  "task": "splicing",
+  "balanced": true,
+  "n": 25536,
+  "pos_rate": 0.5,
+  "n_features": 17,
+  "excluded_features": [
+    "alphagenome_splicing"
+  ],
+  "dropped": [],
+  "best_single_feature": "carbon_score",
+  "best_single_auroc": 0.8764139240770831,
+  "best_single_auprc": 0.8827575527008104,
+  "best_strategy": "lasso",
+  "merge_auroc": 0.9269270287022519,
+  "merge_auprc": 0.9296337998345799,
+  "selected_features": {
+    "lasso": {
+      "1": [
+        "carbon_score",
+        "enformer_max_abs",
+        "enformer_top5_absmean",
+        "GPN_MSA_score",
+        "enformer_absmean",
+        "enformer_neg_sum",
+        "evo2_7b_base_score",
+        "enformer_std",
+        "generator_score",
+        "evo2_1b_base_score",
+        "enformer_mean",
+        "enformer_pos_sum"
+      ],
+      "2": [
+        "carbon_score",
+        "enformer_max_abs",
+        "GPN_MSA_score",
+        "enformer_std",
+        "enformer_top5_absmean",
+        "enformer_absmean",
+        "generator_score",
+        "enformer_neg_sum",
+        "evo2_7b_base_score",
+        "enformer_pos_sum",
+        "enformer_mean",
+        "evo2_1b_base_score"
+      ],
+      "3": [
+        "enformer_std",
+        "enformer_max_abs",
+        "carbon_score",
+        "GPN_MSA_score",
+        "enformer_absmean",
+        "enformer_top5_absmean",
+        "enformer_neg_sum",
+        "generator_score",
+        "enformer_pos_sum",
+        "enformer_mean",
+        "evo2_7b_base_score",
+        "evo2_1b_base_score"
+      ]
+    },
+    "correlation": {
+      "1": [
+        "GPN_MSA_score",
+        "evo2_7b_base_score",
+        "evo2_1b_base_score",
+        "carbon_score",
+        "generator_score",
+        "enformer_absmean",
+        "enformer_std",
+        "enformer_mean",
+        "enformer_pos_sum",
+        "enformer_max_abs"
+      ],
+      "2": [
+        "GPN_MSA_score",
+        "evo2_7b_base_score",
+        "evo2_1b_base_score",
+        "carbon_score",
+        "generator_v2_score",
+        "enformer_absmean",
+        "enformer_pos_sum",
+        "enformer_mean",
+        "enformer_top5_absmean",
+        "nt_v2_score"
+      ],
+      "3": [
+        "GPN_MSA_score",
+        "evo2_7b_base_score",
+        "evo2_1b_base_score",
+        "carbon_score",
+        "generator_score",
+        "enformer_absmean",
+        "enformer_std",
+        "enformer_pos_sum",
+        "enformer_mean",
+        "nt_v2_score"
+      ]
+    },
+    "beam": {
+      "1": [
+        "carbon_score",
+        "enformer_absmean",
+        "evo2_7b_base_score",
+        "generator_v2_score",
+        "evo2_1b_base_score",
+        "enformer_mean"
+      ],
+      "2": [
+        "carbon_score",
+        "enformer_absmean",
+        "generator_score",
+        "evo2_7b_base_score",
+        "evo2_1b_base_score",
+        "generator_v2_score"
+      ],
+      "3": [
+        "carbon_score",
+        "enformer_absmean",
+        "generator_score",
+        "evo2_7b_score",
+        "evo2_1b_base_score",
+        "evo2_7b_base_score"
+      ]
+    }
+  },
+  "runtime_sec": 281.1
+}

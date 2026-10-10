@@ -1,0 +1,10 @@
+# Checksums of the raw files that were actually used, recorded from the working copies
+# on the analysis hosts. Verify with:  md5sum -c checksums.md5
+#
+# Only ClinVar is listed: it is the one large raw input that was kept on disk after the
+# datasets were built. gnomAD and SpliceVarDB were consumed as derived extracts that
+# were not retained, and hg38 / GENCODE / dbNSFP / GPN-MSA should be verified
+# against the checksums published by their providers (the UCSC md5sum.txt is fetched
+# alongside hg38 by download_raw_data.sh).
+0e9b0df5bc2f82334df20a3c61dd2494  clinvar/clinvar_20251221.vcf.gz
+8d66b5922346b9a4c7afa1dc273266c3  clinvar/clinvar_20251221.vcf.gz.tbi

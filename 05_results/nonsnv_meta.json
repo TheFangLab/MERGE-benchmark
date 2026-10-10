@@ -1,0 +1,135 @@
+{
+  "task": "nonsnv",
+  "balanced": false,
+  "n": 36862,
+  "pos_rate": 0.8144430578915957,
+  "n_features": 16,
+  "excluded_features": [
+    "alphagenome_raw_score_max",
+    "alphagenome_raw_score_min",
+    "alphagenome_raw_score_mean",
+    "alphagenome_quantile_score_max",
+    "alphagenome_quantile_score_min",
+    "alphagenome_quantile_score_mean"
+  ],
+  "dropped": [],
+  "best_single_feature": "evo2_7b_score",
+  "best_single_auroc": 0.934723344769734,
+  "best_single_auprc": 0.9838496446151452,
+  "best_strategy": "lasso",
+  "merge_auroc": 0.9820292223322366,
+  "merge_auprc": 0.994310226557556,
+  "selected_features": {
+    "lasso": {
+      "1": [
+        "evo2_7b_score",
+        "carbon_score",
+        "enformer_std",
+        "enformer_top5_absmean",
+        "generator_score",
+        "evo2_1b_base_score",
+        "enformer_absmean",
+        "generator_v2_score",
+        "evo2_7b_base_score",
+        "enformer_neg_sum",
+        "nt_old_score",
+        "hyenadna_score"
+      ],
+      "2": [
+        "evo2_7b_score",
+        "carbon_score",
+        "enformer_std",
+        "evo2_1b_base_score",
+        "enformer_absmean",
+        "generator_v2_score",
+        "generator_score",
+        "enformer_top5_absmean",
+        "enformer_neg_sum",
+        "enformer_pos_sum",
+        "hyenadna_score",
+        "evo2_7b_base_score"
+      ],
+      "3": [
+        "evo2_7b_score",
+        "carbon_score",
+        "enformer_std",
+        "enformer_top5_absmean",
+        "generator_score",
+        "evo2_1b_base_score",
+        "evo2_7b_base_score",
+        "enformer_absmean",
+        "generator_v2_score",
+        "hyenadna_score",
+        "nt_old_score",
+        "enformer_neg_sum"
+      ]
+    },
+    "correlation": {
+      "1": [
+        "evo2_7b_score",
+        "carbon_score",
+        "evo2_1b_base_score",
+        "generator_v2_score",
+        "nt_old_score",
+        "nt_v2_score",
+        "hyenadna_score",
+        "enformer_top5_absmean"
+      ],
+      "2": [
+        "evo2_7b_score",
+        "carbon_score",
+        "evo2_1b_base_score",
+        "generator_v2_score",
+        "nt_old_score",
+        "nt_v2_score",
+        "hyenadna_score",
+        "enformer_max_abs"
+      ],
+      "3": [
+        "evo2_7b_score",
+        "carbon_score",
+        "evo2_1b_base_score",
+        "generator_v2_score",
+        "nt_old_score",
+        "nt_v2_score",
+        "hyenadna_score",
+        "enformer_std"
+      ]
+    },
+    "beam": {
+      "1": [
+        "evo2_7b_score",
+        "carbon_score",
+        "generator_v2_score",
+        "hyenadna_score",
+        "evo2_1b_base_score",
+        "generator_score"
+      ],
+      "2": [
+        "evo2_7b_score",
+        "carbon_score",
+        "generator_v2_score",
+        "hyenadna_score",
+        "evo2_1b_base_score",
+        "generator_score"
+      ],
+      "3": [
+        "evo2_7b_score",
+        "carbon_score",
+        "hyenadna_score",
+        "generator_score",
+        "evo2_1b_base_score",
+        "nt_old_score"
+      ]
+    }
+  },
+  "runtime_sec": 206.2,
+  "model": "MERGE without AlphaGenome",
+  "candidate_pool_for_ensemble": "all features except alphagenome_*",
+  "candidate_pool_for_single_feature_benchmark": "all features, AlphaGenome included and scored by a label-free percentile without fitting a model",
+  "best_single_nonalphagenome_feature": "evo2_7b_score",
+  "best_single_nonalphagenome_auroc": 0.934723344769734,
+  "best_single_nonalphagenome_auprc": 0.9838496446151452,
+  "alphagenome_average_offered": false,
+  "ensemble_excludes": "alphagenome_*"
+}

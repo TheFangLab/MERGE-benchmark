@@ -1,0 +1,296 @@
+[
+ {
+  "task": "coding",
+  "comparison": "candidate input",
+  "reference": "AlphaMissense_score",
+  "merge_strategy": "beam",
+  "n": 4289,
+  "positives": 2912,
+  "delong_z": 7.542112169355631,
+  "delong_p": 4.62419722380779e-14,
+  "merge_auroc": 0.9486488683792605,
+  "merge_auroc_ci": [
+   0.9415049264007597,
+   0.9558370267622718
+  ],
+  "merge_auprc": 0.9710306132462873,
+  "merge_auprc_ci": [
+   0.965671345183502,
+   0.976196689038894
+  ],
+  "reference_auroc": 0.9324800789261574,
+  "reference_auroc_ci": [
+   0.9241689940755505,
+   0.9405529332459479
+  ],
+  "reference_auprc": 0.9646332553941075,
+  "reference_auprc_ci": [
+   0.9592146346008283,
+   0.9699103335732308
+  ],
+  "delta_auroc": 0.016168789453103183,
+  "delta_auroc_ci": [
+   0.012053643127478975,
+   0.02042390139816614
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": 0.006397357852179764,
+  "delta_auprc_ci": [
+   0.003206704120941714,
+   0.009399398023863139
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "splicing",
+  "comparison": "candidate input",
+  "reference": "carbon_score",
+  "merge_strategy": "lasso",
+  "n": 35015,
+  "positives": 22247,
+  "delong_z": 38.038303378588076,
+  "delong_p": 0.0,
+  "merge_auroc": 0.9267740670280455,
+  "merge_auroc_ci": [
+   0.9239607679425222,
+   0.9294079350994974
+  ],
+  "merge_auprc": 0.9559696507398991,
+  "merge_auprc_ci": [
+   0.95388129317609,
+   0.9579232747798642
+  ],
+  "reference_auroc": 0.8761141342675474,
+  "reference_auroc_ci": [
+   0.8724725449538943,
+   0.8797330474435713
+  ],
+  "reference_auprc": 0.9248023852574201,
+  "reference_auprc_ci": [
+   0.9218901282722438,
+   0.9276994531729033
+  ],
+  "delta_auroc": 0.05065993276049818,
+  "delta_auroc_ci": [
+   0.048095818196193255,
+   0.05320640798186244
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": 0.031167265482479056,
+  "delta_auprc_ci": [
+   0.029060451710515453,
+   0.03332618132032984
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "noncoding",
+  "comparison": "candidate input",
+  "reference": "evo2_7b_base_score",
+  "merge_strategy": "lasso",
+  "n": 86829,
+  "positives": 1340,
+  "delong_z": 4.519636517931821,
+  "delong_p": 6.194589261418754e-06,
+  "merge_auroc": 0.9325001313776425,
+  "merge_auroc_ci": [
+   0.9233388161311843,
+   0.9412575532323875
+  ],
+  "merge_auprc": 0.6032117776978925,
+  "merge_auprc_ci": [
+   0.5779952002036081,
+   0.629513628074566
+  ],
+  "reference_auroc": 0.9082410619992481,
+  "reference_auroc_ci": [
+   0.8965025933772051,
+   0.9195441888700702
+  ],
+  "reference_auprc": 0.49018482181199413,
+  "reference_auprc_ci": [
+   0.46383641228295963,
+   0.5194783240672416
+  ],
+  "delta_auroc": 0.024259069378394393,
+  "delta_auroc_ci": [
+   0.01370248472222052,
+   0.035160002037444696
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": 0.11302695588589834,
+  "delta_auprc_ci": [
+   0.08676904569950018,
+   0.13741860362761504
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "nonsnv",
+  "comparison": "candidate input",
+  "reference": "evo2_7b_score",
+  "merge_strategy": "lasso",
+  "n": 36862,
+  "positives": 30022,
+  "delong_z": 39.52580782321103,
+  "delong_p": 0.0,
+  "merge_auroc": 0.9806651072838981,
+  "merge_auroc_ci": [
+   0.9786732189523005,
+   0.9824408326194318
+  ],
+  "merge_auprc": 0.9943323025839002,
+  "merge_auprc_ci": [
+   0.9934623990429887,
+   0.9951078576350961
+  ],
+  "reference_auroc": 0.9360767357349249,
+  "reference_auroc_ci": [
+   0.933145443524164,
+   0.9388678523541801
+  ],
+  "reference_auprc": 0.984443874320019,
+  "reference_auprc_ci": [
+   0.9834163811106091,
+   0.9853893335057247
+  ],
+  "delta_auroc": 0.044588371548973216,
+  "delta_auroc_ci": [
+   0.04229283826120102,
+   0.04687671243816902
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": 0.009888428263881144,
+  "delta_auprc_ci": [
+   0.00910623696291903,
+   0.010696941044748597
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "splicing",
+  "comparison": "independent comparator",
+  "reference": "alphagenome_splicing",
+  "merge_strategy": "lasso",
+  "n": 35015,
+  "positives": 22247,
+  "delong_z": -22.901629010534517,
+  "delong_p": 4.475723850215652e-116,
+  "merge_auroc": 0.9267740670280455,
+  "merge_auroc_ci": [
+   0.9239607679425222,
+   0.9294079350994974
+  ],
+  "merge_auprc": 0.9559696507398991,
+  "merge_auprc_ci": [
+   0.95388129317609,
+   0.9579232747798642
+  ],
+  "reference_auroc": 0.9570596178353241,
+  "reference_auroc_ci": [
+   0.9549171390417542,
+   0.9592377948276346
+  ],
+  "reference_auprc": 0.9715950929122461,
+  "reference_auprc_ci": [
+   0.9697459971843986,
+   0.9734358040076757
+  ],
+  "delta_auroc": -0.030285550807278572,
+  "delta_auroc_ci": [
+   -0.03299291636101594,
+   -0.027971186158213698
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": -0.01562544217234696,
+  "delta_auprc_ci": [
+   -0.017807851951891683,
+   -0.013669081575140156
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "noncoding",
+  "comparison": "independent comparator",
+  "reference": "alphagenome_quantile_score_max",
+  "merge_strategy": "lasso",
+  "n": 86829,
+  "positives": 1340,
+  "delong_z": -9.601927678336688,
+  "delong_p": 7.846302402297711e-22,
+  "merge_auroc": 0.9325001313776425,
+  "merge_auroc_ci": [
+   0.9233388161311843,
+   0.9412575532323875
+  ],
+  "merge_auprc": 0.6032117776978925,
+  "merge_auprc_ci": [
+   0.5779952002036081,
+   0.629513628074566
+  ],
+  "reference_auroc": 0.9783110570391965,
+  "reference_auroc_ci": [
+   0.9734504656311724,
+   0.9828597678535234
+  ],
+  "reference_auprc": 0.7073667180687496,
+  "reference_auprc_ci": [
+   0.6837484945759338,
+   0.733203659033018
+  ],
+  "delta_auroc": -0.04581092566155398,
+  "delta_auroc_ci": [
+   -0.055104723257578904,
+   -0.03706936994861698
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": -0.10415494037085715,
+  "delta_auprc_ci": [
+   -0.13504836583471672,
+   -0.07233429537113094
+  ],
+  "delta_auprc_boot_p": 0.0
+ },
+ {
+  "task": "noncoding",
+  "comparison": "independent comparator",
+  "reference": "alphagenome_raw_score_max",
+  "merge_strategy": "lasso",
+  "n": 86829,
+  "positives": 1340,
+  "delong_z": -9.480449472608234,
+  "delong_p": 2.5319010096330218e-21,
+  "merge_auroc": 0.9325001313776425,
+  "merge_auroc_ci": [
+   0.9233388161311843,
+   0.9412575532323875
+  ],
+  "merge_auprc": 0.6032117776978925,
+  "merge_auprc_ci": [
+   0.5779952002036081,
+   0.629513628074566
+  ],
+  "reference_auroc": 0.9771463702321481,
+  "reference_auroc_ci": [
+   0.9721043694327087,
+   0.9817650783778937
+  ],
+  "reference_auprc": 0.8005896996361549,
+  "reference_auprc_ci": [
+   0.7804788278070719,
+   0.8204712088405273
+  ],
+  "delta_auroc": -0.04464623885450558,
+  "delta_auroc_ci": [
+   -0.05424982776871168,
+   -0.03548907236996341
+  ],
+  "delta_auroc_boot_p": 0.0,
+  "delta_auprc": -0.19737792193826242,
+  "delta_auprc_ci": [
+   -0.2231291964444924,
+   -0.17143155790802972
+  ],
+  "delta_auprc_boot_p": 0.0
+ }
+]

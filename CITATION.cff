@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the manuscript and this archive."
+title: "MERGE-benchmark: data and code for benchmarking genomic foundation and sequence-to-function models for variant pathogenicity prediction"
+abstract: >-
+  Data and code for benchmarking DNA language, evolutionary, protein and
+  sequence-to-function models on four variant classes (coding missense, splicing and
+  noncoding SNVs, and short non-SNVs) under fixed chromosome-held-out folds, and for
+  MERGE (Model Ensemble for Ranking Genomic Effects), which integrates fixed
+  model-derived features.
+type: software
+license: MIT
+repository-code: "https://github.com/TheFangLab/MERGE-benchmark"
+url: "https://merge.fanglab.cn"
+version: "1.0.0"
+keywords:
+  - variant effect prediction
+  - genomic foundation models
+  - sequence-to-function models
+  - benchmarking
+  - ensemble learning
+authors:
+  - family-names: "Chen"
+    given-names: "Yang"
+    affiliation: "Department of Genetics and Biomedical Informatics, Zhongshan School of Medicine, Sun Yat-sen University"
+  - family-names: "Fang"
+    given-names: "Li"
+    affiliation: "Department of Genetics and Biomedical Informatics, Zhongshan School of Medicine, Sun Yat-sen University"
+    email: "fangli9@mail.sysu.edu.cn"
+# After the first Zenodo release, add the concept DOI:
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"

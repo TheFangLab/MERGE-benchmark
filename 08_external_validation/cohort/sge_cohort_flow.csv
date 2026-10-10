@@ -1,0 +1,9 @@
+stage,n
+official_table,3893
+missense_LOF_FUNC_source_ClinVar_absent,1584
+valid_hg19_snv,1584
+unique_hg38_liftover,1584
+hg38_reference_match,1584
+unique_hg38_variant,1584
+absent_from_local_ClinVar_20251221,0
+absent_from_original_coding_training,1577
