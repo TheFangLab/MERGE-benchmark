@@ -54,8 +54,8 @@ formula, and the script in `shared/` that produces it.
 | `generator_score`, `generator_v2_score`, `nt_v2_score` | SNV: `variant_lm_scores.py`; non-SNV: `non_snv_lm_scores.py` | 600 bp / 128 tokens; causal NLL difference, or L2 distance between pooled embeddings; float32 unless `--bf16` |
 | `NT_score` (SNV) | `score_bigfib.py` | 8,192 bp window, `max_length = 1000`, L2 embedding distance |
 | `heyenadna_score` (SNV) | `score_bigfib.py` | 1,000 bp upstream context, next-token `log p(alt) − log p(ref)` |
-| `enformer_*` (7 columns) | `enformer_summary_shard.py` + `merge_enformer_summary_shards.py` | 4,047 tracks summarized as absmean / mean / std / max_abs / top5_absmean / pos_sum / neg_sum |
-| `alphagenome_{raw,quantile}_score_{max,min,mean}` | `alphagenome_non_snv.py` + `summarize_alphagenome.py` | `dna_client` + `RECOMMENDED_VARIANT_SCORERS`, 2²⁰ bp window; per-scorer statistics, then max / min / count-weighted mean over 11 scorers |
+| `enformer_*` (7 columns) | `enformer_summary_shard.py` + `merge_enformer_summary_shards.py` | all 5,313 human tracks summarized as absmean / mean / std / max_abs / top5_absmean / pos_sum / neg_sum |
+| `alphagenome_{raw,quantile}_score_{max,min,mean}` | `alphagenome_non_snv.py` + `summarize_alphagenome.py` | `dna_client` + `RECOMMENDED_VARIANT_SCORERS`; the variant's reference interval resized to 2²⁰ bp; per-scorer statistics over the rows `tidy_scores()` keeps, then max / min / count-weighted mean over 11 scorers — the same values the web server and merge-cli compute |
 | `alphagenome_splicing` | `alphagenome_splicing.py` | `max(splice_sites) + max(splice_site_usage) + max(splice_junctions) / 5`, 1 Mb interval |
 | Non-SNV `carbon_score` | `non_snv_causal_features.py --backend carbon` | 24,576 bp haplotypes, SUM-delta |
 | Non-SNV `nt_old_score`, `hyenadna_score` | `non_snv_lm_scores.py` | haplotype scoring; see the deliberate exception below |
@@ -81,16 +81,36 @@ stored column (Pearson r; splicing n = 4,804, coding n = 330):
 |---|---:|---:|---|
 | `GPN_MSA_score`, `nt_v2_score` | 1.0000 | 1.0000 | identical, or equal to 1e-5 |
 | `heyenadna_score` | — | 1.0000 | equal to 1e-5 |
-| six global `alphagenome_*` | — | 0.9995–1.0000 | equal to 1e-9 for at least 98.5% of variants; quantile mean differs by a median 8e-5 |
 | `ESM1b_score`, `AlphaMissense_score` | — | 0.995–0.9997 | dbNSFP lookup; 99.4–99.7% identical |
 | `alphagenome_splicing` | 0.9999 | — | hosted model; median absolute difference 0.002 |
 | `evo2_*` | 0.998–0.9996 | 0.97–0.99 | GPU and bfloat16 nondeterminism |
 | `carbon_score` | 0.9995 | 0.964 | as above |
-| `enformer_*` | 0.997–0.999 | 0.9999–1.0000 | TensorFlow GPU nondeterminism |
+| `enformer_*` | 1.0000 | 0.9999–1.0000 | TensorFlow GPU nondeterminism; splicing median relative difference 0.2% |
 | `generator_score`, `generator_v2_score` | 1.0000 | 1.0000 | identical; float32, see below |
 
 The coding overlap is common variants with weak effects, so the same small numerical
 noise lowers the correlation more there.
+
+**Enformer splicing and noncoding columns were recomputed on 12 October 2026.** They had
+been produced by a predecessor script that stored the per-track scores in a dictionary
+keyed by the first 30 characters of each track description, so tracks sharing a truncated
+name overwrote one another and only 4,047 of the 5,313 tracks entered the summaries (the
+positive and negative sums were about 25% smaller). Both columns now come from
+`enformer_summary_shard.py` over all 5,313 tracks, as the coding, non-SNV and BRCA1 SGE
+columns always did; the track count can be checked from any row as
+`(enformer_pos_sum − enformer_neg_sum) / enformer_absmean`.
+
+**AlphaGenome outputs depend on the hosted model and on the exact interval.** A shift of
+the 2²⁰-bp interval by a single base changes the global summaries of weak variants
+substantially, so the interval is fixed to the one the web server and merge-cli request
+(`variant.reference_interval.resize(2**20)`). The coding and noncoding columns come from an
+earlier version of the AlphaGenome API: re-scoring 100 coding variants with today's API
+and this script gives Spearman 0.991 (raw maximum), 0.995 (raw minimum) and 0.956 (raw mean)
+with the stored values, but 0.53–0.84 for the quantile summaries. The non-SNV columns and
+the BRCA1 SGE columns (`08_external_validation/`) were recomputed with this script and the
+current API (client 0.5.1) on 12 October 2026; the earlier non-SNV values could not be
+reproduced with any interval placement, sequence length or aggregation (Spearman 0.2–0.5
+with today's output). MERGE itself uses no AlphaGenome feature.
 
 **GENERATOR and GENERATOR-v2 are computed in float32.** The score is a difference
 between two mean NLLs that share all but one position, so reduced precision matters

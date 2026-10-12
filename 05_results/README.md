@@ -34,8 +34,8 @@ folds (all variants).
 | Task | n | Strategy | AUROC | AUPRC |
 |---|---:|---|---:|---:|
 | Coding SNVs | 4,289 | beam search | 0.9519 ± 0.0272 | 0.9729 ± 0.0171 |
-| Splicing SNVs | 35,015 | LASSO | 0.9265 ± 0.0046 | 0.9558 ± 0.0031 |
-| Noncoding SNVs | 86,829 | LASSO | 0.9472 ± 0.0054 | 0.6924 ± 0.0323 |
+| Splicing SNVs | 35,015 | LASSO | 0.9269 ± 0.0042 | 0.9561 ± 0.0027 |
+| Noncoding SNVs | 86,829 | beam search | 0.9472 ± 0.0137 | 0.6841 ± 0.0258 |
 | Non-SNVs | 36,862 | LASSO | 0.9820 ± 0.0035 | 0.9943 ± 0.0017 |
 
 Mean ± sample SD over the three chromosome-held-out outer folds.

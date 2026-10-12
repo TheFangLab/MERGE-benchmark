@@ -16,9 +16,9 @@
   "best_single_feature": "alphagenome_quantile_score_max",
   "best_single_auroc": 0.9773697770374442,
   "best_single_auprc": 0.6855254616702199,
-  "best_strategy": "lasso",
-  "merge_auroc": 0.9471660922195877,
-  "merge_auprc": 0.6923750026036685,
+  "best_strategy": "beam",
+  "merge_auroc": 0.947182783406289,
+  "merge_auprc": 0.6841295282809708,
   "selected_features": {
     "lasso": {
       "1": [
@@ -27,8 +27,8 @@
         "enformer_std",
         "GPN_MSA_score",
         "enformer_absmean",
-        "evo2_7b_score",
         "evo2_1b_base_score",
+        "evo2_7b_score",
         "evo2_7b_base_score",
         "enformer_pos_sum",
         "NT_score",
@@ -39,29 +39,29 @@
         "enformer_std",
         "enformer_absmean",
         "carbon_score",
-        "enformer_top5_absmean",
-        "enformer_max_abs",
         "evo2_1b_base_score",
+        "enformer_max_abs",
         "GPN_MSA_score",
         "evo2_7b_score",
-        "evo2_7b_base_score",
+        "enformer_neg_sum",
+        "enformer_mean",
         "NT_score",
-        "generator_v2_score",
-        "heyenadna_score"
+        "enformer_top5_absmean",
+        "evo2_7b_base_score"
       ],
       "3": [
         "enformer_max_abs",
         "enformer_std",
         "carbon_score",
-        "evo2_1b_base_score",
         "enformer_absmean",
+        "evo2_1b_base_score",
         "GPN_MSA_score",
         "evo2_7b_base_score",
         "evo2_7b_score",
         "NT_score",
         "enformer_neg_sum",
-        "enformer_pos_sum",
-        "enformer_top5_absmean"
+        "enformer_top5_absmean",
+        "enformer_pos_sum"
       ]
     },
     "correlation": {
@@ -83,7 +83,7 @@
         "generator_v2_score",
         "generator_score",
         "GPN_MSA_score",
-        "enformer_top5_absmean"
+        "enformer_max_abs"
       ],
       "3": [
         "carbon_score",
@@ -123,7 +123,7 @@
       ]
     }
   },
-  "runtime_sec": 743.6,
+  "runtime_sec": 717.7,
   "model": "MERGE without AlphaGenome",
   "candidate_pool_for_ensemble": "all features except alphagenome_*",
   "candidate_pool_for_single_feature_benchmark": "all features, AlphaGenome included and scored by a label-free percentile without fitting a model",

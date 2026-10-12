@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Extract compact AlphaGenome features for ClinVar Non-SNV variants."""
+"""Per-scorer AlphaGenome statistics for a variant table (any variant type).
+
+summarize_alphagenome.py turns the output into the six global benchmark columns. The
+interval and the scored rows are those of the MERGE web server and merge-cli, so the
+three produce the same values for the same API version.
+"""
 
 from __future__ import annotations
 
@@ -39,8 +44,10 @@ def chromosome_name(value: object) -> str:
 
 
 def make_interval(variant: genome.Variant, width: int) -> genome.Interval:
-    start = max(0, variant.start - width // 2)
-    return genome.Interval(variant.chromosome, start, start + width)
+    # The variant's reference interval resized to `width`, as the MERGE web server and
+    # merge-cli request it. AlphaGenome's outputs for weak variants change noticeably
+    # with a shift of even 1 bp, so the placement is part of the feature definition.
+    return variant.reference_interval.resize(width)
 
 
 def finite_summary(values: np.ndarray, prefix: str) -> dict[str, float | int]:
@@ -82,11 +89,23 @@ def scorer_features(scores) -> dict[str, float | int]:
             ),
             scorer.requested_output.name.lower(),
         )
-        features.update(finite_summary(adata.X, f"alphagenome_{name}_raw"))
+        # The rows variant_scorers.tidy_scores() keeps for this scorer (gene-centric
+        # scores whose track strand does not match the gene strand are dropped), so the
+        # summaries equal those the web server and merge-cli compute from tidy_scores.
+        # A scorer can keep no rows (e.g. no gene with a matching strand); it then
+        # contributes n = 0 and drops out of the global summaries, as on the server.
+        tidy = variant_scorers.tidy_anndata(adata, match_gene_strand=True)
+
+        def column(key: str) -> np.ndarray:
+            if tidy is None or key not in tidy.columns:
+                return np.array([], dtype=float)
+            return tidy[key].to_numpy(dtype=float)
+
+        features.update(finite_summary(column("raw_score"), f"alphagenome_{name}_raw"))
         if "quantiles" in adata.layers:
             features.update(
                 finite_summary(
-                    adata.layers["quantiles"],
+                    column("quantile_score"),
                     f"alphagenome_{name}_quantile",
                 )
             )

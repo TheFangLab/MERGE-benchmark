@@ -30,7 +30,7 @@ merge_alphagenome_average = 0.5 * score + 0.5 * pct   # undefined where the Alph
 a fixed 1:1 mean. The AlphaGenome column is fixed by variant class:
 `alphagenome_splicing` for splicing and `alphagenome_raw_score_max` for noncoding
 variants. On coding and non-SNV variants AlphaGenome's summaries are near chance
-(best held-out AUROC 0.571 and 0.519), so the average is not offered there
+(best held-out AUROC 0.571 and 0.512), so the average is not offered there
 (`merge_alphagenome_average: null`, status `not_offered_for_this_variant_type`).
 It is also null when AlphaGenome has no value for the variant; the AlphaGenome value
 is never imputed at prediction time, and the average is never replaced by the MERGE
@@ -48,19 +48,20 @@ pipeline, so missing features are filled with training medians.
 |---|---|---|---:|---:|---:|
 | coding | beam search | LR_L2 | 6 | 4,289 | 0.6789 |
 | splicing | LASSO | CatBoost | 12 | 35,015 | 0.6354 |
-| noncoding | LASSO | HistGB | 12 | 86,829 | 0.0154 |
+| noncoding | beam search | MLP | 6 | 86,829 | 0.0154 |
 | nonsnv | LASSO | XGBoost | 12 | 36,862 | 0.8144 |
 
 Panels:
 
 - **coding**: AlphaMissense_score, ESM1b_score, carbon_score, enformer_top5_absmean, enformer_std, heyenadna_score
-- **splicing**: carbon_score, enformer_std, enformer_max_abs, GPN_MSA_score, enformer_absmean, enformer_neg_sum, enformer_top5_absmean, generator_score, enformer_mean, evo2_7b_base_score, enformer_pos_sum, evo2_1b_base_score
-- **noncoding**: enformer_std, enformer_max_abs, carbon_score, GPN_MSA_score, evo2_1b_base_score, enformer_absmean, evo2_7b_score, enformer_neg_sum, enformer_pos_sum, evo2_7b_base_score, NT_score, generator_v2_score
+- **splicing**: carbon_score, enformer_std, enformer_max_abs, GPN_MSA_score, enformer_absmean, enformer_neg_sum, generator_score, enformer_top5_absmean, enformer_mean, evo2_7b_base_score, enformer_pos_sum, evo2_1b_base_score
+- **noncoding**: evo2_7b_score, carbon_score, enformer_absmean, GPN_MSA_score, evo2_1b_base_score, NT_score
 - **nonsnv**: evo2_7b_score, carbon_score, enformer_std, enformer_top5_absmean, generator_score, evo2_1b_base_score, enformer_absmean, generator_v2_score, evo2_7b_base_score, enformer_neg_sum, hyenadna_score, enformer_pos_sum
 
-GENERATOR scores are float32, and non-SNV HyenaDNA scores are computed one variant at a
-time in float32 (see MERGE-benchmark `02_feature_extraction/README.md`); compute them the
-same way when scoring new variants.
+GENERATOR scores are float32, non-SNV HyenaDNA scores are computed one variant at a
+time in float32, and the seven Enformer summaries cover all 5,313 human tracks (see
+MERGE-benchmark `02_feature_extraction/README.md`); compute them the same way when
+scoring new variants.
 
 ## Interpretation bands
 
@@ -72,8 +73,8 @@ benchmark variants (with an AlphaGenome score) in each band; no labels are used.
 
 | Task | Pathogenic | Likely Pathogenic | Uncertain Significance | Likely Benign | Agreement with the MERGE band |
 |---|---:|---:|---:|---:|---:|
-| splicing | ≥ 0.6725 | ≥ 0.5308 | ≥ 0.3935 | ≥ 0.2535 | 0.812 |
-| noncoding | ≥ 0.8274 | ≥ 0.6955 | ≥ 0.5884 | ≥ 0.5060 | 0.936 |
+| splicing | ≥ 0.6727 | ≥ 0.5339 | ≥ 0.3926 | ≥ 0.2523 | 0.812 |
+| noncoding | ≥ 0.8150 | ≥ 0.6827 | ≥ 0.5764 | ≥ 0.4975 | 0.876 |
 
 The labels name score ranges. They are not ACMG/AMP classifications or calibrated
 probabilities, and the models are research tools, not medical devices.
@@ -86,8 +87,8 @@ Table 2):
 | Task | n | MERGE | MERGE + AlphaGenome average | AlphaGenome |
 |---|---:|---:|---:|---:|
 | coding | 4,289 | 0.9519 / 0.9729 | not offered | — |
-| splicing | 35,015 | 0.9265 / 0.9558 | 0.9565 / 0.9738 | 0.9563 / 0.9710 |
-| noncoding | 86,829 | 0.9472 / 0.6924 | 0.9793 / 0.7718 | 0.9774 / 0.7953 (raw maximum) |
+| splicing | 35,015 | 0.9269 / 0.9561 | 0.9567 / 0.9740 | 0.9563 / 0.9710 |
+| noncoding | 86,829 | 0.9472 / 0.6841 | 0.9781 / 0.7702 | 0.9774 / 0.7953 (raw maximum) |
 | nonsnv | 36,862 | 0.9820 / 0.9943 | not offered | — |
 
 In the benchmark, missing AlphaGenome scores were set to the training-fold median.
@@ -106,9 +107,9 @@ THIRD_PARTY_NOTICES.md of merge-cli.
 | Model | Training table | SHA-256 of the table |
 |---|---|---|
 | coding | `coding_features.csv` | `6b10de865b13190c…` |
-| splicing | `splicing_features.csv` | `3bd81ef0d75293dc…` |
-| noncoding | `noncoding_features.csv` | `7ff51667c30cc098…` |
-| nonsnv | `non_snv_features.csv` | `ecbf4a499a5546ac…` |
+| splicing | `splicing_features.csv` | `a737bf76a8954abc…` |
+| noncoding | `noncoding_features.csv` | `34cc0fa06fb0449b…` |
+| nonsnv | `non_snv_features.csv` | `51b91ea7229d801f…` |
 
 Fitted with scikit-learn 1.9.0 and CatBoost 1.2.10 (full software versions are stored in
 each file under `software_versions`).

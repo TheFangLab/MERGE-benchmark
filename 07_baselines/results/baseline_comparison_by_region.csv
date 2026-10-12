@@ -1,6 +1,6 @@
 task,region,predictor,n,positives,auroc,auprc
-noncoding,UTR5,MERGE,3105,51,0.7436,0.1538
-noncoding,UTR5,MERGE + AlphaGenome average,3105,51,0.7534,0.1972
+noncoding,UTR5,MERGE,3105,51,0.7584,0.1708
+noncoding,UTR5,MERGE + AlphaGenome average,3105,51,0.7746,0.2313
 noncoding,UTR5,AlphaGenome_quantile_max,3105,51,0.6234,0.0646
 noncoding,UTR5,AlphaGenome_raw_max,3105,51,0.6725,0.124
 noncoding,UTR5,CADD,3105,51,0.7461,0.2566
@@ -9,8 +9,8 @@ noncoding,UTR5,ReMM_v031,3105,51,0.7804,0.1084
 noncoding,UTR5,ReMM_v04,3105,51,0.7537,0.1352
 noncoding,UTR5,ncER,3105,51,0.718,0.0678
 noncoding,UTR5,phyloP100way,3105,51,0.694,0.1864
-noncoding,intronic,MERGE,72993,1228,0.9547,0.7342
-noncoding,intronic,MERGE + AlphaGenome average,72993,1228,0.9879,0.8073
+noncoding,intronic,MERGE,72993,1228,0.9543,0.7289
+noncoding,intronic,MERGE + AlphaGenome average,72993,1228,0.9855,0.8057
 noncoding,intronic,AlphaGenome_quantile_max,72993,1228,0.9856,0.7434
 noncoding,intronic,AlphaGenome_raw_max,72993,1228,0.9903,0.8437
 noncoding,intronic,CADD,72993,1228,0.928,0.4804
@@ -19,8 +19,8 @@ noncoding,intronic,ReMM_v031,72993,1228,0.8158,0.1905
 noncoding,intronic,ReMM_v04,72993,1228,0.8234,0.1623
 noncoding,intronic,ncER,72993,1228,0.8397,0.1068
 noncoding,intronic,phyloP100way,72993,1228,0.8321,0.326
-noncoding,upstream,MERGE,1612,41,0.8621,0.49
-noncoding,upstream,MERGE + AlphaGenome average,1612,41,0.904,0.5706
+noncoding,upstream,MERGE,1612,41,0.852,0.4789
+noncoding,upstream,MERGE + AlphaGenome average,1612,41,0.9012,0.5605
 noncoding,upstream,AlphaGenome_quantile_max,1612,41,0.9141,0.1918
 noncoding,upstream,AlphaGenome_raw_max,1612,41,0.87,0.2954
 noncoding,upstream,CADD,1612,41,0.8928,0.3599

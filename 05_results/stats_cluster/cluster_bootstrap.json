@@ -36,32 +36,32 @@
   "task": "splicing",
   "n": 35015,
   "n_chr": 24,
-  "merge_auroc": 0.9268,
+  "merge_auroc": 0.927,
   "merge_auroc_ci_cluster": [
-   0.9204,
-   0.9329
+   0.9209,
+   0.9331
   ],
   "single_auroc": 0.9571,
   "single_auroc_ci_cluster": [
    0.9511,
    0.9622
   ],
-  "delta_auroc": -0.0303,
+  "delta_auroc": -0.03,
   "delta_auroc_ci_cluster": [
-   -0.0355,
-   -0.0252
+   -0.0352,
+   -0.0248
   ],
   "delta_auroc_p_cluster": 0.0,
-  "merge_auprc": 0.956,
+  "merge_auprc": 0.9563,
   "merge_auprc_ci_cluster": [
-   0.9519,
-   0.9603
+   0.9523,
+   0.9606
   ],
   "single_auprc": 0.9716,
-  "delta_auprc": -0.0156,
+  "delta_auprc": -0.0153,
   "delta_auprc_ci_cluster": [
-   -0.0197,
-   -0.012
+   -0.0194,
+   -0.0117
   ],
   "delta_auprc_p_cluster": 0.0
  },
@@ -69,34 +69,34 @@
   "task": "noncoding",
   "n": 86829,
   "n_chr": 23,
-  "merge_auroc": 0.9325,
+  "merge_auroc": 0.9491,
   "merge_auroc_ci_cluster": [
-   0.9178,
-   0.9481
+   0.9332,
+   0.9623
   ],
   "single_auroc": 0.9783,
   "single_auroc_ci_cluster": [
    0.9702,
    0.9846
   ],
-  "delta_auroc": -0.0458,
+  "delta_auroc": -0.0292,
   "delta_auroc_ci_cluster": [
-   -0.0607,
-   -0.028
+   -0.042,
+   -0.0183
   ],
   "delta_auroc_p_cluster": 0.0,
-  "merge_auprc": 0.6032,
+  "merge_auprc": 0.6798,
   "merge_auprc_ci_cluster": [
-   0.5402,
-   0.6644
+   0.6186,
+   0.742
   ],
   "single_auprc": 0.7074,
-  "delta_auprc": -0.1042,
+  "delta_auprc": -0.0275,
   "delta_auprc_ci_cluster": [
-   -0.1542,
-   -0.0146
+   -0.0668,
+   0.0325
   ],
-  "delta_auprc_p_cluster": 0.02
+  "delta_auprc_p_cluster": 0.361
  },
  {
   "task": "nonsnv",

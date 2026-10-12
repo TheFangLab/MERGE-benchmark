@@ -12,7 +12,7 @@
   "alphagenome_feature": "alphagenome_raw_score_max",
   "feature_selection": "fixed per variant type",
   "component_transform": "training-fold median imputation, then mid-rank empirical CDF against the training-fold AlphaGenome values; no labels, no fitted model",
-  "ensemble_strategy": "lasso",
+  "ensemble_strategy": "beam",
   "missing_policy": "evaluation: a missing AlphaGenome score takes the training-fold median before the percentile transform, so every variant is scored; deployment: the average is computed only where AlphaGenome has a score (alphagenome_observed = 1)",
   "exported_table_max_abs_deviation": 0.0
 }

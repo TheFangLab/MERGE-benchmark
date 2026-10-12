@@ -9,19 +9,19 @@ Coding SNVs,BayesDel,B,0.9432,0.9716
 Coding SNVs,CADD,A,0.9138,0.9556
 Coding SNVs,AlphaGenome,A,0.5316,0.7749
 Splicing SNVs,AlphaGenome,A,0.9681,0.9792
-Splicing SNVs,MERGE + AlphaGenome average,Fixed average,0.9612,0.9776
+Splicing SNVs,MERGE + AlphaGenome average,Fixed average,0.9614,0.9777
 Splicing SNVs,SpliceAI,A,0.9569,0.9684
 Splicing SNVs,Pangolin,A,0.9438,0.965
-Splicing SNVs,MERGE,MERGE,0.9302,0.9603
+Splicing SNVs,MERGE,MERGE,0.9305,0.9605
 Splicing SNVs,CADD,A,0.8883,0.9287
-Noncoding SNVs,MERGE + AlphaGenome average,Fixed average,0.9806,0.7736
+Noncoding SNVs,MERGE + AlphaGenome average,Fixed average,0.9795,0.7716
 Noncoding SNVs,AlphaGenome quantile maximum,A,0.9789,0.6871
 Noncoding SNVs,AlphaGenome raw maximum,A,0.9786,0.7969
-Noncoding SNVs,MERGE,MERGE,0.9487,0.6954
+Noncoding SNVs,MERGE,MERGE,0.9486,0.6861
 Noncoding SNVs,CADD,A,0.924,0.4567
 Noncoding SNVs,ncER,B,0.8356,0.0939
 Noncoding SNVs,LINSIGHT,A,0.8257,0.2635
 Non-SNVs,MERGE,MERGE,0.9812,0.9955
 Non-SNVs,CADD,A,0.9792,0.9949
 Non-SNVs,Pangolin,A,0.5876,0.8952
-Non-SNVs,AlphaGenome,A,0.4962,0.8607
+Non-SNVs,AlphaGenome,A,0.5144,0.8687

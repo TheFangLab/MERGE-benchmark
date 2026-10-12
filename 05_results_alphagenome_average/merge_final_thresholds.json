@@ -5,10 +5,10 @@
     "n_oof": 34444,
     "pos_rate": 0.6446,
     "cuts": [
-      0.6725,
-      0.5308,
-      0.3935,
-      0.2535
+      0.6727,
+      0.5339,
+      0.3926,
+      0.2523
     ],
     "band_names": [
       "Pathogenic",
@@ -17,67 +17,67 @@
       "Likely Benign",
       "Benign"
     ],
-    "band_agreement_with_ensemble": 0.8123,
-    "band_agreement_if_reusing_ensemble_cuts": 0.6489,
+    "band_agreement_with_ensemble": 0.8125,
+    "band_agreement_if_reusing_ensemble_cuts": 0.6511,
     "per_cut_check": [
       {
         "ensemble_cut": 0.8,
-        "merge_alphagenome_average_cut": 0.6725,
-        "share_below_cut": 0.5252,
+        "merge_alphagenome_average_cut": 0.6727,
+        "share_below_cut": 0.5257,
         "ensemble": {
-          "call_rate": 0.4748,
-          "sensitivity": 0.7087,
-          "specificity": 0.9495
+          "call_rate": 0.4743,
+          "sensitivity": 0.7086,
+          "specificity": 0.9507
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.4748,
-          "sensitivity": 0.7252,
-          "specificity": 0.9793
+          "call_rate": 0.4743,
+          "sensitivity": 0.7245,
+          "specificity": 0.9794
         }
       },
       {
         "ensemble_cut": 0.6,
-        "merge_alphagenome_average_cut": 0.5308,
-        "share_below_cut": 0.4348,
+        "merge_alphagenome_average_cut": 0.5339,
+        "share_below_cut": 0.4362,
         "ensemble": {
-          "call_rate": 0.5652,
-          "sensitivity": 0.8234,
-          "specificity": 0.903
+          "call_rate": 0.5638,
+          "sensitivity": 0.8225,
+          "specificity": 0.9056
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.5652,
-          "sensitivity": 0.8457,
-          "specificity": 0.9435
+          "call_rate": 0.5638,
+          "sensitivity": 0.8438,
+          "specificity": 0.944
         }
       },
       {
         "ensemble_cut": 0.4,
-        "merge_alphagenome_average_cut": 0.3935,
-        "share_below_cut": 0.3774,
+        "merge_alphagenome_average_cut": 0.3926,
+        "share_below_cut": 0.3773,
         "ensemble": {
-          "call_rate": 0.6226,
+          "call_rate": 0.6227,
           "sensitivity": 0.8805,
-          "specificity": 0.8451
+          "specificity": 0.8449
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.6226,
-          "sensitivity": 0.9024,
-          "specificity": 0.8848
+          "call_rate": 0.6227,
+          "sensitivity": 0.9028,
+          "specificity": 0.8853
         }
       },
       {
         "ensemble_cut": 0.2,
-        "merge_alphagenome_average_cut": 0.2535,
-        "share_below_cut": 0.2967,
+        "merge_alphagenome_average_cut": 0.2523,
+        "share_below_cut": 0.2953,
         "ensemble": {
-          "call_rate": 0.7033,
-          "sensitivity": 0.9312,
-          "specificity": 0.7099
+          "call_rate": 0.7047,
+          "sensitivity": 0.9319,
+          "specificity": 0.7074
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.7033,
-          "sensitivity": 0.9577,
-          "specificity": 0.758
+          "call_rate": 0.7047,
+          "sensitivity": 0.9584,
+          "specificity": 0.7555
         }
       }
     ],
@@ -90,10 +90,10 @@
     "n_oof": 86829,
     "pos_rate": 0.0154,
     "cuts": [
-      0.8274,
-      0.6955,
-      0.5884,
-      0.506
+      0.815,
+      0.6827,
+      0.5764,
+      0.4975
     ],
     "band_names": [
       "Pathogenic",
@@ -102,67 +102,67 @@
       "Likely Benign",
       "Benign"
     ],
-    "band_agreement_with_ensemble": 0.936,
-    "band_agreement_if_reusing_ensemble_cuts": 0.3925,
+    "band_agreement_with_ensemble": 0.8756,
+    "band_agreement_if_reusing_ensemble_cuts": 0.3822,
     "per_cut_check": [
       {
         "ensemble_cut": 0.8,
-        "merge_alphagenome_average_cut": 0.8274,
-        "share_below_cut": 0.9843,
+        "merge_alphagenome_average_cut": 0.815,
+        "share_below_cut": 0.9779,
         "ensemble": {
-          "call_rate": 0.0157,
-          "sensitivity": 0.6022,
-          "specificity": 0.9934
+          "call_rate": 0.0221,
+          "sensitivity": 0.7455,
+          "specificity": 0.9892
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.0157,
-          "sensitivity": 0.6612,
-          "specificity": 0.9944
+          "call_rate": 0.0221,
+          "sensitivity": 0.7843,
+          "specificity": 0.9898
         }
       },
       {
         "ensemble_cut": 0.6,
-        "merge_alphagenome_average_cut": 0.6955,
-        "share_below_cut": 0.9754,
+        "merge_alphagenome_average_cut": 0.6827,
+        "share_below_cut": 0.9622,
         "ensemble": {
-          "call_rate": 0.0246,
-          "sensitivity": 0.6918,
-          "specificity": 0.9859
+          "call_rate": 0.0378,
+          "sensitivity": 0.8007,
+          "specificity": 0.9741
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.0246,
-          "sensitivity": 0.7373,
-          "specificity": 0.9866
+          "call_rate": 0.0378,
+          "sensitivity": 0.8306,
+          "specificity": 0.9746
         }
       },
       {
         "ensemble_cut": 0.4,
-        "merge_alphagenome_average_cut": 0.5884,
-        "share_below_cut": 0.962,
+        "merge_alphagenome_average_cut": 0.5764,
+        "share_below_cut": 0.9374,
         "ensemble": {
-          "call_rate": 0.038,
-          "sensitivity": 0.747,
-          "specificity": 0.9731
+          "call_rate": 0.0626,
+          "sensitivity": 0.8381,
+          "specificity": 0.9495
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.038,
-          "sensitivity": 0.8127,
-          "specificity": 0.9741
+          "call_rate": 0.0626,
+          "sensitivity": 0.8813,
+          "specificity": 0.9502
         }
       },
       {
         "ensemble_cut": 0.2,
-        "merge_alphagenome_average_cut": 0.506,
-        "share_below_cut": 0.9286,
+        "merge_alphagenome_average_cut": 0.4975,
+        "share_below_cut": 0.8729,
         "ensemble": {
-          "call_rate": 0.0714,
-          "sensitivity": 0.8172,
-          "specificity": 0.9403
+          "call_rate": 0.1271,
+          "sensitivity": 0.8813,
+          "specificity": 0.8847
         },
         "merge_alphagenome_average": {
-          "call_rate": 0.0714,
-          "sensitivity": 0.9142,
-          "specificity": 0.9418
+          "call_rate": 0.1271,
+          "sensitivity": 0.9642,
+          "specificity": 0.886
         }
       }
     ],

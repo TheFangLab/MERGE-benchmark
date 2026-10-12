@@ -132,7 +132,7 @@ python3 ${S}/score_bigfib.py --model hyena --input \"\$IN\" --output \"\$OUT/hye
   --fasta \"\$FASTA\""
       fi ;;
     enformer)
-      emit "# enformer_* (7 summaries over 4,047 tracks); one shard of rows [START, END) per GPU, then merged
+      emit "# enformer_* (7 summaries over all 5,313 human tracks); one shard of rows [START, END) per GPU, then merged
 python3 ${S}/enformer_summary_shard.py --gpu \${GPU} --start-index \${START} --end-index \${END} \\
   --input-csv \"\$IN\" --output-csv \"\$OUT/enformer_gpu\${GPU}.csv\"
 python3 ${S}/merge_enformer_summary_shards.py \\

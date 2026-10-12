@@ -40,7 +40,7 @@ maxima are reported separately as comparators.
 Scope
 -----
 Offered for splicing and non-coding variants only. On coding and non-SNV
-variants the AlphaGenome columns are near chance (best AUROC 0.571 and 0.519),
+variants the AlphaGenome columns are near chance (best AUROC 0.571 and 0.512),
 so averaging them in only pulls scores toward 0.5; those two variant types
 report the ensemble score alone.
 

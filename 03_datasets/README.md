@@ -69,9 +69,16 @@ was affected.
 `generator_score` and `generator_v2_score` are float32 scores; a re-run with the scripts in
 `02_feature_extraction/` reproduces them exactly at the same batch size and to 5e-5 at any
 other. The non-SNV `hyenadna_score` is scored one variant at a time (float32), because
-HyenaDNA has no attention mask and batch padding would change it. Evo 2, Carbon, Enformer and
-AlphaGenome reproduce closely but not bit for bit. Measured agreements:
+HyenaDNA has no attention mask and batch padding would change it. Evo 2, Carbon and Enformer
+reproduce closely but not bit for bit; AlphaGenome follows the hosted model, which has changed
+since the coding and noncoding columns were computed. Measured agreements:
 `02_feature_extraction/README.md`.
+
+Three groups of columns were recomputed on 12 October 2026: the seven `enformer_*` columns of
+the splicing and noncoding tables, which had covered only 4,047 of Enformer's 5,313 tracks
+(every table now uses all 5,313), and the six `alphagenome_*` columns of the non-SNV table
+and of the BRCA1 SGE features (`../08_external_validation/features/`), whose earlier values
+could not be reproduced with the current AlphaGenome API. All other columns are unchanged.
 
 The splicing table is the strict deduplication of the three-source assembly: 35,774 rows,
 of which every row of the 379 duplicated (chr, pos, ref, alt) keys (759 rows) is removed

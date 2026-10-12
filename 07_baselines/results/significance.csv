@@ -1,15 +1,15 @@
 task,anchor,comparator,n,positives,d_auroc,auroc_lo,auroc_hi,auroc_resolved,d_auprc,auprc_lo,auprc_hi,auprc_resolved
 coding,MERGE,CADD,4289,2912,0.045,0.0281,0.0728,True,0.0301,0.0154,0.0529,True
-splicing,MERGE,SpliceAI,33699,21842,-0.0278,-0.0337,-0.0227,True,-0.0087,-0.0136,-0.0044,True
-splicing,MERGE,Pangolin,34271,21983,-0.0078,-0.014,-0.0015,True,-0.0002,-0.0045,0.0037,False
-splicing,MERGE,AlphaGenome,35015,22247,-0.0303,-0.0357,-0.0254,True,-0.0156,-0.0198,-0.0119,True
-noncoding,MERGE,CADD,86829,1340,0.0092,-0.0028,0.0272,False,0.1464,0.0906,0.2263,True
-noncoding,MERGE,AlphaGenome_quantile_max,86829,1340,-0.0458,-0.0612,-0.0264,True,-0.1042,-0.1562,0.0006,False
-noncoding,MERGE,AlphaGenome_raw_max,86829,1340,-0.0446,-0.0573,-0.0284,True,-0.1974,-0.2429,-0.1259,True
+splicing,MERGE,SpliceAI,33699,21842,-0.0276,-0.0335,-0.0225,True,-0.0086,-0.0134,-0.0042,True
+splicing,MERGE,Pangolin,34271,21983,-0.0075,-0.0136,-0.0012,True,0.0001,-0.0041,0.0041,False
+splicing,MERGE,AlphaGenome,35015,22247,-0.03,-0.0354,-0.0251,True,-0.0153,-0.0194,-0.0117,True
+noncoding,MERGE,CADD,86829,1340,0.0258,0.0144,0.0369,True,0.223,0.1705,0.2759,True
+noncoding,MERGE,AlphaGenome_quantile_max,86829,1340,-0.0292,-0.042,-0.0179,True,-0.0275,-0.0686,0.0424,False
+noncoding,MERGE,AlphaGenome_raw_max,86829,1340,-0.0281,-0.0408,-0.0168,True,-0.1208,-0.1557,-0.0806,True
 nonsnv,MERGE,CADD,36861,30021,0.0035,0.0001,0.0078,True,0.0011,-0.0002,0.0029,False
-splicing,MERGE + AlphaGenome average,SpliceAI,33699,21842,0.0039,0.001,0.0068,True,0.0089,0.0061,0.012,True
-splicing,MERGE + AlphaGenome average,Pangolin,34271,21983,0.0226,0.0177,0.0282,True,0.0178,0.0146,0.0215,True
-splicing,MERGE + AlphaGenome average,AlphaGenome,35015,22247,-0.0001,-0.0026,0.0024,False,0.0026,0.0009,0.0042,True
-noncoding,MERGE + AlphaGenome average,CADD,86829,1340,0.0538,0.0431,0.0647,True,0.2495,0.202,0.3195,True
-noncoding,MERGE + AlphaGenome average,AlphaGenome_quantile_max,86829,1340,-0.0012,-0.0082,0.0069,False,-0.0011,-0.0444,0.0944,False
-noncoding,MERGE + AlphaGenome average,AlphaGenome_raw_max,86829,1340,-0.0001,-0.0032,0.0045,False,-0.0943,-0.1287,-0.0349,True
+splicing,MERGE + AlphaGenome average,SpliceAI,33699,21842,0.0041,0.0011,0.007,True,0.0091,0.0062,0.0122,True
+splicing,MERGE + AlphaGenome average,Pangolin,34271,21983,0.0228,0.0179,0.0283,True,0.018,0.0148,0.0216,True
+splicing,MERGE + AlphaGenome average,AlphaGenome,35015,22247,0.0001,-0.0024,0.0026,False,0.0027,0.001,0.0044,True
+noncoding,MERGE + AlphaGenome average,CADD,86829,1340,0.0555,0.0451,0.0663,True,0.3164,0.2674,0.3655,True
+noncoding,MERGE + AlphaGenome average,AlphaGenome_quantile_max,86829,1340,0.0005,-0.0062,0.0078,False,0.0658,0.0259,0.1328,True
+noncoding,MERGE + AlphaGenome average,AlphaGenome_raw_max,86829,1340,0.0017,-0.0018,0.0063,False,-0.0274,-0.0566,0.0055,False

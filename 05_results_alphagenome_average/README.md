@@ -35,8 +35,8 @@ percentile, interpolated linearly (no labels used).
 
 | Variant type | n | Average | MERGE | AlphaGenome |
 |---|---:|---:|---:|---:|
-| Splicing | 35,015 | 0.9565 / 0.9738 | 0.9265 / 0.9558 | 0.9563 / 0.9710 |
-| Noncoding | 86,829 | 0.9793 / 0.7718 | 0.9472 / 0.6924 | 0.9774 / 0.7953 |
+| Splicing | 35,015 | 0.9567 / 0.9740 | 0.9269 / 0.9561 | 0.9563 / 0.9710 |
+| Noncoding | 86,829 | 0.9781 / 0.7702 | 0.9472 / 0.6841 | 0.9774 / 0.7953 |
 
 AUROC / AUPRC, mean over the three chromosome-held-out folds. On noncoding variants
 the AlphaGenome raw maximum keeps the higher AUPRC.
@@ -51,8 +51,8 @@ are used.
 
 | Variant type | Cut-points (high → low) | Band agreement with MERGE |
 |---|---|---:|
-| Splicing | 0.6725 / 0.5308 / 0.3935 / 0.2535 | 0.812 |
-| Noncoding | 0.8274 / 0.6955 / 0.5884 / 0.5060 | 0.936 |
+| Splicing | 0.6727 / 0.5339 / 0.3926 / 0.2523 | 0.812 |
+| Noncoding | 0.8150 / 0.6827 / 0.5764 / 0.4975 | 0.876 |
 
 These bands describe score ranges; they are not calibrated clinical probabilities.
 

@@ -12,19 +12,19 @@
   "best_single_auroc": 0.9562792223919012,
   "best_single_auprc": 0.971040546530314,
   "best_strategy": "lasso",
-  "merge_auroc": 0.9265292583825581,
-  "merge_auprc": 0.9557533515189487,
+  "merge_auroc": 0.9268686448218574,
+  "merge_auprc": 0.9560972242596674,
   "selected_features": {
     "lasso": {
       "1": [
         "carbon_score",
         "enformer_max_abs",
-        "GPN_MSA_score",
         "enformer_std",
+        "GPN_MSA_score",
         "enformer_absmean",
         "enformer_neg_sum",
-        "enformer_top5_absmean",
         "enformer_mean",
+        "enformer_top5_absmean",
         "evo2_7b_base_score",
         "generator_score",
         "evo2_1b_base_score",
@@ -40,21 +40,21 @@
         "enformer_neg_sum",
         "enformer_top5_absmean",
         "evo2_7b_base_score",
-        "enformer_pos_sum",
         "enformer_mean",
+        "enformer_pos_sum",
         "evo2_1b_base_score"
       ],
       "3": [
         "enformer_std",
         "carbon_score",
         "enformer_max_abs",
-        "GPN_MSA_score",
         "enformer_absmean",
-        "generator_score",
+        "GPN_MSA_score",
         "enformer_neg_sum",
+        "generator_score",
+        "enformer_mean",
         "enformer_top5_absmean",
         "enformer_pos_sum",
-        "enformer_mean",
         "evo2_1b_base_score",
         "evo2_7b_base_score"
       ]
@@ -80,8 +80,8 @@
         "generator_score",
         "enformer_absmean",
         "enformer_pos_sum",
-        "enformer_top5_absmean",
         "enformer_mean",
+        "enformer_top5_absmean",
         "nt_v2_score"
       ],
       "3": [
@@ -91,8 +91,8 @@
         "carbon_score",
         "generator_score",
         "enformer_absmean",
-        "enformer_pos_sum",
         "enformer_mean",
+        "enformer_pos_sum",
         "enformer_top5_absmean",
         "nt_v2_score"
       ]
@@ -101,16 +101,16 @@
       "1": [
         "carbon_score",
         "enformer_absmean",
-        "generator_v2_score",
         "evo2_7b_base_score",
+        "generator_v2_score",
         "evo2_1b_base_score",
-        "enformer_neg_sum"
+        "enformer_mean"
       ],
       "2": [
         "carbon_score",
         "enformer_absmean",
-        "generator_score",
         "evo2_7b_base_score",
+        "generator_score",
         "generator_v2_score",
         "evo2_7b_score"
       ],
@@ -124,7 +124,7 @@
       ]
     }
   },
-  "runtime_sec": 342.8,
+  "runtime_sec": 340.4,
   "model": "MERGE without AlphaGenome",
   "candidate_pool_for_ensemble": "all features except alphagenome_*",
   "candidate_pool_for_single_feature_benchmark": "all features, AlphaGenome included and scored by a label-free percentile without fitting a model",
