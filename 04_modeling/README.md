@@ -23,6 +23,7 @@ shows what changed.
 | `calibrate_alphagenome_average_thresholds.py` | Interpretation cut-points for the average, matched to the MERGE bands without labels | Methods (web server) |
 | `export_models.py` | Refits each task's model on every variant, the procedure behind the released models in `05_results/trained_models/` (writes `trained_models_refit/`) | Methods |
 | `manuscript_tables.py` | Tables 1–10 (`05_results/tables/`) | Tables 1–10 |
+| `additional_files.py` | Additional files 1–3 (Tables S1–S23) as `.xlsx`, from the committed results; checks its per-fold single-feature metrics against `{task}_singlefeature.csv` | Additional files |
 | `make_figures.py`, `make_figures2.py` | Figures 2, 3, 5 and 4, 6 | Figs 2–6 |
 | `figstyle.py` | Shared palette, display names and figure output | — |
 

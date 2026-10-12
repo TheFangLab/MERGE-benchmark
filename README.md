@@ -16,6 +16,7 @@ model fitting.
 | Item | Files | Code |
 |---|---|---|
 | Tables 1–10 | `05_results/tables/` (`TABLES.md`, one CSV per table) | `04_modeling/manuscript_tables.py` |
+| Additional files 1–3 (Tables S1–S23) | written as `.xlsx` to a directory of your choice | `04_modeling/additional_files.py OUTDIR` |
 | Figures 2–9 | `06_figures/` | see `06_figures/README.md` |
 | Datasets (Table 10) | `03_datasets/` | `01_dataset_construction/` |
 | Feature extraction | columns of `03_datasets/` | `02_feature_extraction/` |
