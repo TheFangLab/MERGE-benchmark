@@ -14,8 +14,8 @@ MERGE benchmark — licence
     https://creativecommons.org/licenses/by-nc/4.0/
     It contains no trained model, but it summarizes AlphaGenome output, whose API is
     offered for non-commercial use.
-  * The precomputed scores described in 09_precomputed_scores/ (two .csv.gz files
-    attached to the release precomputed-v1.0) — CC BY-NC 4.0. Besides the MERGE scores
+  * The precomputed scores described in 09_precomputed_scores/ (two .csv.gz files,
+    release assets of github.com/XiaoYangGao0401/MERGE-precomputed-scores) — CC BY-NC 4.0. Besides the MERGE scores
     they contain AlphaGenome, dbNSFP (AlphaMissense, ESM-1b) and Nucleotide Transformer
     outputs, whose sources restrict commercial use.
   * Scores of third-party tools extracted for the benchmark variants

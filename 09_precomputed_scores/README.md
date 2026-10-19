@@ -14,11 +14,14 @@ sequence-to-function models for variant pathogenicity prediction* (Chen and Fang
 
 The two `.csv.gz` files are larger than GitHub allows in a repository (100 MB), so they
 are attached to the release
-[`precomputed-v1.0`](https://github.com/TheFangLab/MERGE-benchmark/releases/tag/precomputed-v1.0)
-of this repository; this directory keeps the README and the checksums.
+[`v1.0`](https://github.com/XiaoYangGao0401/MERGE-precomputed-scores/releases/tag/v1.0)
+of [XiaoYangGao0401/MERGE-precomputed-scores](https://github.com/XiaoYangGao0401/MERGE-precomputed-scores).
+That repository and `09_precomputed_scores/` of
+[MERGE-benchmark](https://github.com/TheFangLab/MERGE-benchmark) keep this README and the
+checksums.
 
 ```bash
-B=https://github.com/TheFangLab/MERGE-benchmark/releases/download/precomputed-v1.0
+B=https://github.com/XiaoYangGao0401/MERGE-precomputed-scores/releases/download/v1.0
 curl -LO $B/coding_precompute_MERGE_scored.csv.gz      # 21 MB
 curl -LO $B/splicing_precompute_MERGE_scored.csv.gz    # 274 MB
 md5sum -c MD5SUMS.txt
@@ -72,7 +75,7 @@ those models.
 ```python
 import pandas as pd, joblib
 df = pd.read_csv("splicing_precompute_MERGE_scored.csv.gz")
-m = joblib.load("05_results/trained_models/MERGE_noAlphaGenome_splicing.pkl")
+m = joblib.load("05_results/trained_models/MERGE_noAlphaGenome_splicing.pkl")   # in MERGE-benchmark
 score = m["pipeline"].predict_proba(df[m["features"]].to_numpy())[:, 1]   # equals df.MERGE_score
 ```
 
@@ -104,4 +107,4 @@ licence; AlphaMissense and ESM-1b columns), and Nucleotide Transformer (CC BY-NC
 
 ## Citation
 
-Please cite the manuscript and this repository (`CITATION.cff`).
+Please cite the manuscript and the MERGE-benchmark repository (`CITATION.cff` there).
