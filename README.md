@@ -42,6 +42,7 @@ model fitting.
 | `06_figures/` | Figures (PNG and 300-dpi TIFF) |
 | `07_baselines/` | Comparison with established predictors |
 | `08_external_validation/` | BRCA1 saturation genome editing validation and the BRCA1-excluded retraining |
+| `09_precomputed_scores/` | README and checksums of the precomputed scores (the files are attached to a release) |
 | `environment/` | Software versions and hardware |
 
 | Task | Variants | Positive / negative | Benchmark features | MERGE candidate features |
@@ -80,8 +81,9 @@ noncoding score tracks, SpliceAI, Pangolin and the CADD web service.
 * **Web server**: <https://merge.fanglab.cn> — single variants or VCF upload, hg38 or hg19.
 * **Command line**: `pip install merge-cli` (command `merge`), documented at
   <https://github.com/TheFangLab/MERGE>; it also runs as a Model Context Protocol server.
-* **Precomputed scores** for 107,922 coding and 1,920,006 splice-region SNVs: Zenodo
-  (DOI to be added).
+* **Precomputed scores** for 107,922 coding and 1,920,006 splice-region SNVs: attached to
+  the release [`precomputed-v1.0`](https://github.com/TheFangLab/MERGE-benchmark/releases/tag/precomputed-v1.0);
+  see `09_precomputed_scores/`.
 
 Both tools serve the models in `05_results/trained_models/` and, for splicing and
 noncoding variants with an AlphaGenome score, the fixed average.
@@ -89,8 +91,8 @@ noncoding variants with an AlphaGenome score, the fixed average.
 ## Licence
 
 Code and models: MIT. Derived tables and figures: CC BY 4.0. The AlphaGenome reference
-table: CC BY-NC 4.0. Third-party scores extracted for the benchmark variants keep their
-sources' terms. Details in [LICENSE](LICENSE).
+table and the precomputed scores: CC BY-NC 4.0. Third-party scores extracted for the
+benchmark variants keep their sources' terms. Details in [LICENSE](LICENSE).
 
 The licences cover what this work produced, not the resources it uses. In particular,
 the AlphaGenome API is offered for non-commercial use and its terms ask that outputs not

@@ -1,0 +1,2 @@
+233fa7c218ac8fa602b489876c88676a  coding_precompute_MERGE_scored.csv.gz
+a9526adadbd7275bd45f1bcaaab5a279  splicing_precompute_MERGE_scored.csv.gz

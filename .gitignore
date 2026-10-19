@@ -24,5 +24,8 @@ __pycache__/
 05_results/balanced_1to1/*_oof.csv
 05_results/balanced_1to1/*_shap*.csv
 
+# Precomputed score files: attached to the release, too large for the repository
+09_precomputed_scores/*.csv.gz
+
 # Models re-fitted by 04_modeling/run_all.sh (the released ones are in trained_models/)
 05_results/trained_models_refit/
