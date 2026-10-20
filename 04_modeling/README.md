@@ -29,7 +29,7 @@ shows what changed.
 
 ## Design
 
-* **Nothing crosses folds.** Median imputation, standardization, feature selection and
+* **Within each strategy,** median imputation, standardization, feature selection and
   algorithm choice are fitted on the training folds only; inner validation is
   `GroupKFold` grouped by chromosome. The AlphaGenome percentile also takes its
   reference distribution, and the median used for missing scores, from the training
@@ -39,9 +39,12 @@ shows what changed.
   AlphaGenome is evaluated as an independent comparator and through the fixed
   average, neither of which fits anything to labels.
 * **Task-level MERGE** is the feature-selection strategy with the highest mean outer-fold
-  AUROC: beam search (coding), LASSO (splicing, noncoding, non-SNV). All three
+  AUROC: beam search (coding, noncoding), LASSO (splicing, non-SNV). All three
   strategies are kept in `{task}_merge_oof.csv` and
   `{task}_merge_summary.csv`.
+  Because this task-level choice uses outer-fold results, the selected strategy's
+  reported performance is subject to selection optimism. It does not estimate a
+  fully nested procedure that also chooses the strategy inside each training fold.
 * **Fold summaries** are unweighted means and sample SDs (divisor 2) over the three
   outer folds. Pooled metrics (Tables 3 and 5) rank predictions across folds and differ
   from the fold means.
