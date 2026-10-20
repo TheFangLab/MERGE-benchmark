@@ -82,7 +82,7 @@ noncoding score tracks, SpliceAI, Pangolin and the CADD web service.
   <https://github.com/TheFangLab/MERGE>; it also runs as a Model Context Protocol server.
 * **Precomputed scores** for 107,922 coding and 1,920,006 splice-region SNVs (hg38, with
   hg19 versions) are distributed separately:
-  <https://github.com/XiaoYangGao0401/MERGE-precomputed-scores>.
+  <https://github.com/TheFangLab/MERGE-precomputed-scores>.
 
 Both tools serve the models in `05_results/trained_models/` and, for splicing and
 noncoding variants with an AlphaGenome score, the fixed average.
